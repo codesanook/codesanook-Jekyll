@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  jekyll:
+    image: jekyll/jekyll
+    volumes:
+      - .:/srv/jekyll
+    ports:
+      - '3000:4000'
+      - '35729:35729'
+    command: jekyll server --livereload --force_polling
